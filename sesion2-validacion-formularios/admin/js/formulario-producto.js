@@ -91,3 +91,11 @@ selects.forEach((select) => {
     console.log(select);
     select.addEventListener('blur' , validarFormulario);
 });
+
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if(campos.inputProducto && campos.inputModelo && campos.inputProducto && campos.inputDetalle && campos.inputPeso && campos.inputMaterial && campos.inputStock && campos.inputTalla && campos.inputImagen) {
+        formulario.reset();
+    }
+});
